@@ -1,0 +1,21 @@
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-dark-alt: #263238;
+    --color-gray: #8F95A5;
+    --color-bg: #F5F5F5;
+    --color-bg-alt: #EEEEEE;
+
+    --border: 2px solid var(--color-dark-alt);
+
+    --border-radius-small: 5px;
+    --border-radius: 10px;
+    --border-radius-large: 15px;
+
+    --font-family-base: "Poppins", sans-serif;
+
+    --container-width: 1350px;
+    --container-padding-x: 15px;
+
+    --input-height: 80px;
+}
