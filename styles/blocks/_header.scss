@@ -1,11 +1,25 @@
 .header {
     padding-top: 55px;
 
+    @include mobile {
+        padding-top: 40px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         column-gap: 20px;
+    }
+
+    &__logo {
+        @include tablet {
+            width: 89px;
+        }
+
+        @include mobile-s {
+            width: 71px;
+        }
     }
 
     &__menu {
@@ -15,6 +29,11 @@
             display: flex;
             align-items: center;
             column-gap: 40px;
+
+            @include tablet {
+                column-gap: 30px;
+                font-size: 16px;
+            }
         }
 
         &-link {

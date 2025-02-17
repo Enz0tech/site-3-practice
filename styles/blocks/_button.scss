@@ -21,5 +21,11 @@
         height: 70px;
         padding-inline: 57px;
         border-radius: var(--border-radius-small);
+        font-size: 24px;
+
+        @include tablet {
+            padding-inline: 40px;
+            font-size: 18px;
+        }
     }
 }

@@ -1,0 +1,105 @@
+.hero {
+    padding-block: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    &__body {
+    }
+    
+    &__header {
+        margin-bottom: 60px;
+
+        @include tablet {
+            margin-bottom: 33px;
+        }
+    }
+
+    &__title {
+        position: relative;
+        max-width: 386px;
+        color: var(--color-dark);
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+
+            @include tablet {
+                margin-bottom: 27px;
+                font-size: 48px;
+            }
+
+            @include mobile {
+                font-size: 36px;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 1.7em;
+            left: 7em;
+            content: '';
+            display: block;
+            width: 85px;
+            aspect-ratio: 1;
+            background: url('../icons/hero-lamp.svg') center no-repeat;
+
+            @include tablet {
+                left: 6.5em;
+                width: 58px;
+                background-size: 150%;
+            }
+
+            @include mobile {
+                top: 2.2em;
+                width: 50px;
+            }
+
+            @include mobile-m {
+                display: none;
+            }
+        }
+    }
+
+    &__description {
+        max-width: 525px;
+        font-size: 24px;
+
+        @include tablet {
+            max-width: 420px;
+            font-size: 20px;
+        }
+
+        @include mobile {
+            max-width: 338px;
+            font-size: 16px;
+        }
+    }
+
+    &__button {
+        @include tablet {
+            height: 80px;
+            padding-inline: 78px;
+            border-radius: var(--border-radius-small);
+            font-size: 24px;
+        }
+
+        @include mobile {
+            height: 65px;
+            padding-inline: 67px;
+            font-size: 18px;
+        }
+
+    }
+
+    &__image {
+        @include tablet {
+            max-width: 40%;
+            height: auto;
+        }
+
+        @include mobile {
+            max-width: 45%;
+        }
+    }
+}
