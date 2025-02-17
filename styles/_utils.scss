@@ -1,9 +1,15 @@
 .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-    width: 100%;
-    margin-inline: auto;
-    padding-inline: var(--container-padding-x);
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+
+  @include mobile-s {
+    --containerPaddingMobileS: 15px;
+
+    padding-inline: var(--containerPaddingMobileS);
   }
+}
 
 .visually-hidden {
   @include visually-hidden;

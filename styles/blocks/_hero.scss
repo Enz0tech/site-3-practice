@@ -5,7 +5,19 @@
     align-items: center;
     column-gap: 30px;
 
+    @include tablet {
+        padding-top: 65px;
+    }
+    
+    @include mobile-m {
+        flex-direction: column;
+        padding-top: 11px;
+    }
+
     &__body {
+        @include mobile-m {
+            display: contents;
+        }
     }
     
     &__header {
@@ -13,6 +25,10 @@
 
         @include tablet {
             margin-bottom: 33px;
+        }
+
+        @include mobile-m {
+            margin-bottom: 37px;
         }
     }
 
@@ -31,6 +47,16 @@
 
             @include mobile {
                 font-size: 36px;
+            }
+
+            @include mobile-m {
+                max-width: 491px;
+                font-size: 34px;
+                text-align: center;
+            }
+
+            @include mobile-s {
+                margin-bottom: 20px;
             }
         }
 
@@ -74,6 +100,15 @@
             max-width: 338px;
             font-size: 16px;
         }
+
+        @include mobile-m {
+            max-width: 496px;
+            text-align: center;
+        }
+
+        @include mobile-s {
+            font-size: 14px;
+        }
     }
 
     &__button {
@@ -90,6 +125,16 @@
             font-size: 18px;
         }
 
+        @include mobile-m {
+            padding-inline: 101px;
+            height: 75px;
+        }
+
+        @include mobile-s {
+            height: 60px;
+            font-size: 16px;
+            white-space: nowrap;
+        }
     }
 
     &__image {
@@ -100,6 +145,12 @@
 
         @include mobile {
             max-width: 45%;
+        }
+
+        @include mobile-m {
+            order: -1;
+            max-width: 82%;
+            margin-bottom: 17px;
         }
     }
 }

@@ -176,6 +176,12 @@ h3, .h3 {
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
+@media (max-width: 480px) {
+  .container {
+    --containerPaddingMobileS: 15px;
+    padding-inline: var(--containerPaddingMobileS);
+  }
+}
 
 .visually-hidden {
   position: absolute !important;
@@ -440,12 +446,33 @@ h3, .h3 {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media (max-width: 1023px) {
+  .hero {
+    padding-top: 65px;
+  }
+}
+@media (max-width: 575px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 11px;
+  }
+}
+@media (max-width: 575px) {
+  .hero__body {
+    display: contents;
+  }
+}
 .hero__header {
   margin-bottom: 60px;
 }
 @media (max-width: 1023px) {
   .hero__header {
     margin-bottom: 33px;
+  }
+}
+@media (max-width: 575px) {
+  .hero__header {
+    margin-bottom: 37px;
   }
 }
 .hero__title {
@@ -465,6 +492,18 @@ h3, .h3 {
 @media (max-width: 767px) {
   .hero__title:not(:last-child) {
     font-size: 36px;
+  }
+}
+@media (max-width: 575px) {
+  .hero__title:not(:last-child) {
+    max-width: 491px;
+    font-size: 34px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero__title:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 .hero__title::after {
@@ -511,6 +550,17 @@ h3, .h3 {
     font-size: 16px;
   }
 }
+@media (max-width: 575px) {
+  .hero__description {
+    max-width: 496px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero__description {
+    font-size: 14px;
+  }
+}
 @media (max-width: 1023px) {
   .hero__button {
     height: 80px;
@@ -526,6 +576,19 @@ h3, .h3 {
     font-size: 18px;
   }
 }
+@media (max-width: 575px) {
+  .hero__button {
+    padding-inline: 101px;
+    height: 75px;
+  }
+}
+@media (max-width: 480px) {
+  .hero__button {
+    height: 60px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
 @media (max-width: 1023px) {
   .hero__image {
     max-width: 40%;
@@ -535,5 +598,12 @@ h3, .h3 {
 @media (max-width: 767px) {
   .hero__image {
     max-width: 45%;
+  }
+}
+@media (max-width: 575px) {
+  .hero__image {
+    order: -1;
+    max-width: 82%;
+    margin-bottom: 17px;
   }
 }/*# sourceMappingURL=styles.css.map */
