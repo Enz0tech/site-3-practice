@@ -1,0 +1,134 @@
+.skills {
+    padding-bottom: 200px;
+
+    &__header {
+        padding-bottom: 92px;
+
+        @include tablet {
+            padding-bottom: 58px;
+        }
+
+        @include mobile {
+            padding-bottom: 37px;
+        }
+    }
+
+    &__title {
+        color: var(--color-dark);
+        line-height: 1.67;
+        text-align: center;
+    }
+
+    &__body {
+        &-item {
+            background-color: var(--color-bg);
+            border-radius: var(--border-radius);
+
+            &:nth-child(1) {
+                & .skills-card {
+                    @include mobile-m {
+                        padding-top: 0;
+                    }
+
+                    &__image {
+                        @include mobile-m {
+                            width: 185px;
+                            aspect-ratio: 1;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                & .skills-card {
+                    align-items: end;
+                    padding-top: 0;
+
+                    &__image {
+                        @include mobile-m {
+                            margin-bottom: 27px;
+                            width: 185px;
+                            aspect-ratio: 1;
+                            align-self: start;
+
+                            @include mobile-s {
+                                margin-bottom: 50px;
+                                align-self: center;
+                            }
+                        }
+                    }
+                }
+
+                & .skills-card__header {
+                    margin-top: -27px;
+                }
+            }
+
+            &:nth-child(3) {
+                & .skills-card {
+                    padding: 0;
+                }
+
+                & .skills-card__header {
+                    padding: 39px 17px 0 43px;
+
+                    @include tablet {
+                        padding-top: 19px;
+                    }
+
+                    @include mobile {
+                        padding: 15px 17px 0 18px;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                & .skills-card__description {
+                    max-width: 328px;
+                }
+
+                & .skills-card__description {
+                    margin-bottom: 25px;
+                }
+            }
+
+            @include mobile-m {
+                height: 534px;
+
+                &:nth-child(2) {
+                    & .skills-card__description {
+                        margin-bottom: 143px;
+                    }
+                }
+
+                &:nth-child(1n+3) {
+                    & .skills-card {
+                        padding-top: 35px;
+
+                        @include mobile-s {
+                            padding-top: 10px;
+                        }
+                    }
+
+                    & .skills-card__description {
+                        margin-bottom: 126px;
+                    }
+                }
+            }
+
+            @include mobile-s {
+
+                &:nth-child(1n+2) {
+                        height: 473px;
+                    }
+                
+
+                &:nth-child(n) {
+                    & .skills-card__description {
+                        margin-bottom: 33px;
+                    }
+                }
+            }
+        }
+    }
+}

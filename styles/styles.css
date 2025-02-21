@@ -325,6 +325,7 @@ h3, .h3 {
   border: none;
   width: 48px;
   aspect-ratio: 1;
+  outline: none;
   position: relative;
 }
 .cross-button::before, .cross-button::after {
@@ -425,7 +426,7 @@ h3, .h3 {
 }
 @media (max-width: 767px) {
   .mobile-overlay__close-button-wrapper {
-    padding: 22px 13px;
+    padding: 22px 0;
   }
 }
 .mobile-overlay__list {
@@ -449,6 +450,11 @@ h3, .h3 {
 @media (max-width: 1023px) {
   .hero {
     padding-top: 65px;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    padding-block: 70px;
   }
 }
 @media (max-width: 575px) {
@@ -606,4 +612,291 @@ h3, .h3 {
     max-width: 82%;
     margin-bottom: 17px;
   }
+}
+
+.skills {
+  padding-bottom: 200px;
+}
+.skills__header {
+  padding-bottom: 92px;
+}
+@media (max-width: 1023px) {
+  .skills__header {
+    padding-bottom: 58px;
+  }
+}
+@media (max-width: 767px) {
+  .skills__header {
+    padding-bottom: 37px;
+  }
+}
+.skills__title {
+  color: var(--color-dark);
+  line-height: 1.67;
+  text-align: center;
+}
+.skills__body-item {
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius);
+}
+@media (max-width: 575px) {
+  .skills__body-item:nth-child(1) .skills-card {
+    padding-top: 0;
+  }
+}
+@media (max-width: 575px) {
+  .skills__body-item:nth-child(1) .skills-card__image {
+    width: 185px;
+    aspect-ratio: 1;
+  }
+}
+.skills__body-item:nth-child(2) .skills-card {
+  align-items: end;
+  padding-top: 0;
+}
+@media (max-width: 575px) {
+  .skills__body-item:nth-child(2) .skills-card__image {
+    margin-bottom: 27px;
+    width: 185px;
+    aspect-ratio: 1;
+    align-self: start;
+  }
+}
+@media (max-width: 575px) and (max-width: 480px) {
+  .skills__body-item:nth-child(2) .skills-card__image {
+    margin-bottom: 50px;
+    align-self: center;
+  }
+}
+.skills__body-item:nth-child(2) .skills-card__header {
+  margin-top: -27px;
+}
+.skills__body-item:nth-child(3) .skills-card {
+  padding: 0;
+}
+.skills__body-item:nth-child(3) .skills-card__header {
+  padding: 39px 17px 0 43px;
+}
+@media (max-width: 1023px) {
+  .skills__body-item:nth-child(3) .skills-card__header {
+    padding-top: 19px;
+  }
+}
+@media (max-width: 767px) {
+  .skills__body-item:nth-child(3) .skills-card__header {
+    padding: 15px 17px 0 18px;
+  }
+}
+.skills__body-item:nth-child(4) .skills-card__description {
+  max-width: 328px;
+}
+.skills__body-item:nth-child(4) .skills-card__description {
+  margin-bottom: 25px;
+}
+@media (max-width: 575px) {
+  .skills__body-item {
+    height: 534px;
+  }
+  .skills__body-item:nth-child(2) .skills-card__description {
+    margin-bottom: 143px;
+  }
+  .skills__body-item:nth-child(1n+3) .skills-card {
+    padding-top: 35px;
+  }
+}
+@media (max-width: 575px) and (max-width: 480px) {
+  .skills__body-item:nth-child(1n+3) .skills-card {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .skills__body-item:nth-child(1n+3) .skills-card__description {
+    margin-bottom: 126px;
+  }
+}
+@media (max-width: 480px) {
+  .skills__body-item:nth-child(1n+2) {
+    height: 473px;
+  }
+  .skills__body-item:nth-child(n) .skills-card__description {
+    margin-bottom: 33px;
+  }
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+@media (max-width: 767px) {
+  .skills-card {
+    padding: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .skills-card {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .skills-card {
+    align-items: center;
+  }
+}
+.skills-card--reverse {
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 102px;
+       column-gap: 102px;
+}
+@media (max-width: 1023px) {
+  .skills-card--reverse {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .skills-card--reverse {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+}
+@media (max-width: 575px) {
+  .skills-card--reverse {
+    flex-direction: column;
+  }
+}
+.skills-card--reverse-image {
+  order: 1;
+}
+@media (max-width: 1280px) {
+  .skills-card--reverse-image {
+    max-width: 40%;
+  }
+}
+@media (max-width: 575px) {
+  .skills-card--reverse-image {
+    order: 0;
+    max-width: 100%;
+    width: 206px;
+    height: 137px;
+    margin-bottom: 45px;
+  }
+}
+.skills-card__image {
+  height: auto;
+}
+@media (max-width: 480px) {
+  .skills-card__image {
+    margin-bottom: 10px;
+  }
+}
+.skills-card__header {
+  padding-inline: 20px;
+}
+@media (max-width: 1023px) {
+  .skills-card__header {
+    padding-inline: 0;
+  }
+}
+@media (max-width: 575px) {
+  .skills-card__header {
+    padding: 0 25px 36px 15px;
+  }
+}
+.skills-card__title {
+  color: var(--color-dark);
+  line-height: 2.67;
+}
+@media (max-width: 1023px) {
+  .skills-card__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .skills-card__title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .skills-card__description {
+    font-size: 13px;
+  }
+}
+@media (max-width: 575px) {
+  .skills-card__description {
+    font-size: 12px;
+  }
+}
+.skills-card__description:not(:last-child) {
+  margin-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .skills-card__description:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .skills-card__description:not(:last-child) {
+    margin-bottom: 33px;
+  }
+}
+.skills-card__button {
+  width: 218px;
+  height: 60px;
+  border-radius: var(--border-radius-small);
+  font-size: 20px;
+  padding-inline: 51px;
+  white-space: nowrap;
+  justify-content: center;
+}
+@media (max-width: 1023px) {
+  .skills-card__button {
+    width: 196px;
+    height: 57px;
+  }
+}
+@media (max-width: 767px) {
+  .skills-card__button {
+    width: 178px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+.skills-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "one two three" "one four four";
+}
+@media (max-width: 1023px) {
+  .skills-grid {
+    gap: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .skills-grid {
+    gap: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .skills-grid {
+    grid-template-areas: "one two" "three four";
+  }
+}
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-areas: "one" "two" "three" "four";
+  }
+}
+.skills-grid--speaking {
+  grid-area: one;
+}
+.skills-grid--writing {
+  grid-area: two;
+}
+.skills-grid--reading {
+  grid-area: three;
+}
+.skills-grid--listening {
+  grid-area: four;
 }/*# sourceMappingURL=styles.css.map */

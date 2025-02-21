@@ -8,6 +8,10 @@
     @include tablet {
         padding-top: 65px;
     }
+
+    @include mobile {
+        padding-block: 70px;
+    }
     
     @include mobile-m {
         flex-direction: column;

@@ -1,0 +1,45 @@
+.skills-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "one two three"
+    "one four four";
+
+    @include tablet {
+        gap: 13px;
+    }
+
+    @include mobile {
+        gap: 10px;
+    }
+
+    @include mobile-m {
+        grid-template-areas:
+        "one two"
+        "three four";
+    }
+
+    @include mobile-s {
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four";
+    }
+
+    &--speaking {
+        grid-area: one;
+    }
+
+    &--writing {
+        grid-area: two;        
+    }
+
+    &--reading {
+        grid-area: three;
+    }
+
+    &--listening {
+        grid-area: four;
+    }
+}
