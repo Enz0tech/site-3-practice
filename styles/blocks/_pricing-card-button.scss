@@ -1,0 +1,28 @@
+.pricing-card__button {
+    @include flex-center(true);
+    @include fluid-text(18,14);
+
+    align-self: start;
+    column-gap: 8px;
+    height: 45px;
+    padding-inline: 21px;
+    border: none;
+    color: var(--color-price);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+
+    @include hover {
+        background-color: var(--color-gray);
+    }
+
+    @include mobile-m {
+        margin-inline: auto;
+    }
+
+    & span {
+        @include fluid-text(30,18);
+
+        color: var(--color-dark-alt);
+    }
+}
