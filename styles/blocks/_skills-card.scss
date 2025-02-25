@@ -1,14 +1,16 @@
 .skills-card {
+    --paddingSkillsCard: 22px;
+
     display: flex;
     flex-direction: column;
-    padding: 22px;
+    padding: var(--paddingSkillsCard);
 
     @include mobile {
-        padding: 10px;
+        --paddingSkillsCard: 10px;
     }
 
     @include mobile-m {
-        padding: 0;
+        --paddingSkillsCard: 0;
     }
 
     @include mobile-s {
@@ -16,16 +18,18 @@
     }
 
     &--reverse {
+        --columnGapReverseSkillsCard: 102px;
+
         flex-direction: row;
         align-items: center;
-        column-gap: 102px;
+        column-gap: var(--columnGapReverseSkillsCard);
 
         @include tablet {
-            column-gap: 20px;
+            --columnGapReverseSkillsCard: 20px;
         }
 
         @include mobile {
-            column-gap: 0;
+            --columnGapReverseSkillsCard: 0;
         }
 
         @include mobile-m {
@@ -67,39 +71,50 @@
         @include mobile-m {
             padding: 0 25px 36px 15px;
         }
+
+        &--reverse {
+            @include mobile-s {
+                align-self: start;
+            }
+        }
     }
 
     &__title {
+        --fontSizeTitle: 20px;
+
         color: var(--color-dark);
         line-height: 2.67;
 
         @include tablet {
-            font-size: 20px;
+            font-size: var(--fontSizeTitle);
         }
 
         @include mobile-m {
-            font-size: 18px;
+            --fontSizeTitle: 18px;
         }
     }
 
     &__description {
+        --fotnSizeDescription: 13px;
+        --marginBottomDescription: 35px;
+
         @include mobile {
-            font-size: 13px;
+            font-size: var(--fotnSizeDescription);
         }
 
         @include mobile-m {
-            font-size: 12px;
+            --fotnSizeDescription: 12px;
         }
 
         &:not(:last-child) {
-            margin-bottom: 35px;
+            margin-bottom: var(--marginBottomDescription);
 
             @include mobile {
-                margin-bottom: 13px;
+                --marginBottomDescription: 13px;
             }
 
             @include mobile-s {
-                margin-bottom: 33px;
+                --marginBottomDescription: 33px;
             }
         }
     }
@@ -122,10 +137,6 @@
             width: 178px;
             height: 50px;
             font-size: 16px;
-        }
-
-        @include mobile-m {
-
         }
     }
 }

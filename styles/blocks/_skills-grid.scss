@@ -1,16 +1,18 @@
 .skills-grid {
+    --gapGridSkills: 20px;
+
     display: grid;
-    gap: 20px;
+    gap: var(--gapGridSkills);
     grid-template-areas:
     "one two three"
     "one four four";
 
     @include tablet {
-        gap: 13px;
+        --gapGridSkills: 13px;
     }
 
     @include mobile {
-        gap: 10px;
+        --gapGridSkills: 10px;
     }
 
     @include mobile-m {

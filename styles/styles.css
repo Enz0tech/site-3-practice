@@ -614,20 +614,18 @@ h3, .h3 {
   }
 }
 
-.skills {
-  padding-bottom: 200px;
-}
 .skills__header {
-  padding-bottom: 92px;
+  --paddingBottomSkillsHeader: 92px;
+  padding-bottom: var(--paddingBottomSkillsHeader);
 }
 @media (max-width: 1023px) {
   .skills__header {
-    padding-bottom: 58px;
+    --paddingBottomSkillsHeader: 58px;
   }
 }
 @media (max-width: 767px) {
   .skills__header {
-    padding-bottom: 37px;
+    --paddingBottomSkillsHeader: 37px;
   }
 }
 .skills__title {
@@ -656,7 +654,8 @@ h3, .h3 {
 }
 @media (max-width: 575px) {
   .skills__body-item:nth-child(2) .skills-card__image {
-    margin-bottom: 27px;
+    --marginBottomSkillsCardImage: 27px;
+    margin-bottom: var(--marginBottomSkillsCardImage);
     width: 185px;
     aspect-ratio: 1;
     align-self: start;
@@ -664,7 +663,7 @@ h3, .h3 {
 }
 @media (max-width: 575px) and (max-width: 480px) {
   .skills__body-item:nth-child(2) .skills-card__image {
-    margin-bottom: 50px;
+    --marginBottomSkillsCardImage: 50px;
     align-self: center;
   }
 }
@@ -698,7 +697,8 @@ h3, .h3 {
     height: 534px;
   }
   .skills__body-item:nth-child(2) .skills-card__description {
-    margin-bottom: 143px;
+    --marginBottomSkillsCardDescription: 143px;
+    margin-bottom: var(--marginBottomSkillsCardDescription);
   }
   .skills__body-item:nth-child(1n+3) .skills-card {
     padding-top: 35px;
@@ -711,7 +711,8 @@ h3, .h3 {
 }
 @media (max-width: 575px) {
   .skills__body-item:nth-child(1n+3) .skills-card__description {
-    margin-bottom: 126px;
+    --marginBottomSkillsCardDescription: 126px;
+    margin-bottom: var(--marginBottomSkillsCardDescription);
   }
 }
 @media (max-width: 480px) {
@@ -719,23 +720,24 @@ h3, .h3 {
     height: 473px;
   }
   .skills__body-item:nth-child(n) .skills-card__description {
-    margin-bottom: 33px;
+    --marginBottomSkillsCardDescription: 33px;
   }
 }
 
 .skills-card {
+  --paddingSkillsCard: 22px;
   display: flex;
   flex-direction: column;
-  padding: 22px;
+  padding: var(--paddingSkillsCard);
 }
 @media (max-width: 767px) {
   .skills-card {
-    padding: 10px;
+    --paddingSkillsCard: 10px;
   }
 }
 @media (max-width: 575px) {
   .skills-card {
-    padding: 0;
+    --paddingSkillsCard: 0;
   }
 }
 @media (max-width: 480px) {
@@ -744,21 +746,20 @@ h3, .h3 {
   }
 }
 .skills-card--reverse {
+  --columnGapReverseSkillsCard: 102px;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 102px;
-       column-gap: 102px;
+  -moz-column-gap: var(--columnGapReverseSkillsCard);
+       column-gap: var(--columnGapReverseSkillsCard);
 }
 @media (max-width: 1023px) {
   .skills-card--reverse {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    --columnGapReverseSkillsCard: 20px;
   }
 }
 @media (max-width: 767px) {
   .skills-card--reverse {
-    -moz-column-gap: 0;
-         column-gap: 0;
+    --columnGapReverseSkillsCard: 0;
   }
 }
 @media (max-width: 575px) {
@@ -804,41 +805,51 @@ h3, .h3 {
     padding: 0 25px 36px 15px;
   }
 }
+@media (max-width: 480px) {
+  .skills-card__header--reverse {
+    align-self: start;
+  }
+}
 .skills-card__title {
+  --fontSizeTitle: 20px;
   color: var(--color-dark);
   line-height: 2.67;
 }
 @media (max-width: 1023px) {
   .skills-card__title {
-    font-size: 20px;
+    font-size: var(--fontSizeTitle);
   }
 }
 @media (max-width: 575px) {
   .skills-card__title {
-    font-size: 18px;
+    --fontSizeTitle: 18px;
   }
+}
+.skills-card__description {
+  --fotnSizeDescription: 13px;
+  --marginBottomDescription: 35px;
 }
 @media (max-width: 767px) {
   .skills-card__description {
-    font-size: 13px;
+    font-size: var(--fotnSizeDescription);
   }
 }
 @media (max-width: 575px) {
   .skills-card__description {
-    font-size: 12px;
+    --fotnSizeDescription: 12px;
   }
 }
 .skills-card__description:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: var(--marginBottomDescription);
 }
 @media (max-width: 767px) {
   .skills-card__description:not(:last-child) {
-    margin-bottom: 13px;
+    --marginBottomDescription: 13px;
   }
 }
 @media (max-width: 480px) {
   .skills-card__description:not(:last-child) {
-    margin-bottom: 33px;
+    --marginBottomDescription: 33px;
   }
 }
 .skills-card__button {
@@ -863,19 +874,21 @@ h3, .h3 {
     font-size: 16px;
   }
 }
+
 .skills-grid {
+  --gapGridSkills: 20px;
   display: grid;
-  gap: 20px;
+  gap: var(--gapGridSkills);
   grid-template-areas: "one two three" "one four four";
 }
 @media (max-width: 1023px) {
   .skills-grid {
-    gap: 13px;
+    --gapGridSkills: 13px;
   }
 }
 @media (max-width: 767px) {
   .skills-grid {
-    gap: 10px;
+    --gapGridSkills: 10px;
   }
 }
 @media (max-width: 575px) {
@@ -899,4 +912,98 @@ h3, .h3 {
 }
 .skills-grid--listening {
   grid-area: four;
+}
+
+.about {
+  --sectionAboutMarginBottom: 52px;
+  padding-top: 200px;
+}
+@media (max-width: 575px) {
+  .about {
+    padding-top: 84px;
+  }
+}
+.about__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media (max-width: 575px) {
+  .about__body {
+    flex-direction: column;
+  }
+}
+.about__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  max-width: 635px;
+}
+@media (max-width: 575px) {
+  .about__header {
+    display: contents;
+  }
+}
+.about__title {
+  color: var(--color-dark);
+}
+@media (max-width: 575px) {
+  .about__title {
+    order: -2;
+  }
+  .about__title:not(:last-child) {
+    margin-bottom: var(--sectionAboutMarginBottom);
+  }
+}
+@media (max-width: 575px) {
+  .about__description {
+    margin-bottom: var(--sectionAboutMarginBottom);
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .about__description {
+    --sectionAboutMarginBottom: 32px;
+  }
+}
+.about__numbers-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  .about__numbers-list {
+    -moz-column-gap: 78px;
+         column-gap: 78px;
+  }
+}
+@media (max-width: 480px) {
+  .about__numbers-list {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+.about__numbers-item p:nth-child(1) {
+  color: var(--color-dark-alt);
+  font-weight: 600;
+  font-size: clamp(24px, 3vw, 48px);
+}
+@media (max-width: 575px) {
+  .about__numbers-item p:nth-child(1):not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1023px) {
+  .about__image {
+    max-width: 55%;
+    height: auto;
+  }
+}
+@media (max-width: 575px) {
+  .about__image {
+    order: -1;
+    margin-bottom: 25px;
+  }
 }/*# sourceMappingURL=styles.css.map */
