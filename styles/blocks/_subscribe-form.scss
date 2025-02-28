@@ -1,0 +1,61 @@
+.subscribe-form {
+    // max-width: 727px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 12px;
+
+    @include mobile-m {
+        order: 1;
+    }
+
+    &__input {
+        height: var(--input-height);
+        width: 100%;
+        border: var(--border-input);
+        border-radius: var(--border-radius);
+        padding-inline: 33px;
+
+        @include tablet {
+            --input-height: 60px;
+        }
+
+        @include hover {
+            &::placeholder {
+                color: var(--color-dark);
+            }
+            
+            background-color: var(--color-gray);
+        }
+
+        &:focus {
+            border-color: var(--color-dark);
+            outline: none;
+        }
+
+        &::placeholder {
+            @include fluid-text(16,12);
+
+            color: var(--color-gray);
+        }
+    }
+
+    &__button {
+        @include fluid-text(20,14);
+
+        height: var(--input-height);
+        padding-inline: 82px;
+        font-weight: 500;
+
+        @include tablet {
+            --input-height: 60px;
+
+            padding-inline: 56px;
+        }
+
+        @include tablet {
+            padding-inline: 40px;
+        }
+    }
+}

@@ -1,8 +1,6 @@
 .pricing {
     padding-top: 150px;
 
-    padding-bottom: 150px;
-
     &__header {
         --marginBottomPricingHeader: 57px;
 
@@ -20,7 +18,6 @@
     &__title {
         text-align: center;
         color: var(--color-dark);
-        font-size: 30px;
 
         @include mobile-s {
             font-size: 24px;
