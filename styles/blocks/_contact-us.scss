@@ -13,6 +13,10 @@
         text-align: center;
     }
 
+    @include mobile-s {
+        padding-top: 72px;
+    }
+
     &__image {
         @include tablet {
             max-width: 35%;
@@ -21,6 +25,8 @@
 
         @include mobile-m {
             order: 1;
+            max-width: 75%;
+            margin-bottom: 34px;
         }
     }
 
@@ -67,12 +73,25 @@
 
         &:not(:last-child) {
             margin-bottom: 37px;
+
+            @include mobile-m {
+                margin-bottom: 83px;
+            }
+
+            @include mobile-s {
+                margin-bottom: 38px;
+            }
         }
     }
 
     &__description {
         @include mobile-m {
             order: 1;
+            margin-bottom: 60px;
+        }
+
+        @include mobile-s {
+            margin-bottom: 31px;
         }
     }
 }

@@ -8,6 +8,13 @@
 
     @include mobile-m {
         order: 1;
+        width: 512px;
+    }
+
+    @include mobile-s {
+        flex-direction: column;
+        row-gap: 17px;
+        width: 291px;
     }
 
     &__input {
@@ -56,6 +63,10 @@
 
         @include tablet {
             padding-inline: 40px;
+        }
+
+        @include mobile-s {
+            width: 100%;
         }
     }
 }
