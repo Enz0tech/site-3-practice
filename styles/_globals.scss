@@ -6,6 +6,10 @@ body {
     line-height: 1.28;
     color: var(--color-gray);
     background-color: var(--color-light);
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 a,
