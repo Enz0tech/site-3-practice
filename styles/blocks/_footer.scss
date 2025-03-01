@@ -34,17 +34,19 @@
 
     &__info {
         &-list {
+            --columnGapFooterList: 25px;
+
             @include fluid-text(24,11);
 
             display: flex;
-            column-gap: 25px;
+            column-gap: var(--columnGapFooterList);
 
             @include mobile {
-                column-gap: 20px;
+                --columnGapFooterList: 20px;
             }
 
             @include mobile-s {
-                column-gap: 11px;
+                --columnGapFooterList: 11px;
             }
         }
 

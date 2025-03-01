@@ -1,12 +1,14 @@
 .contact-us {
-    padding-top: 250px;
+    --paddingTopSectionContactUs: 250px;
+
+    padding-top: var(--paddingTopSectionContactUs);
 
     @include tablet {
-        padding-top: 145px;
+        --paddingTopSectionContactUs: 145px;
     }
 
     @include mobile {
-        padding-top: 100px;
+        --paddingTopSectionContactUs: 100px;
     }
 
     @include mobile-m {
@@ -14,7 +16,7 @@
     }
 
     @include mobile-s {
-        padding-top: 72px;
+        --paddingTopSectionContactUs: 72px;
     }
 
     &__image {
@@ -31,17 +33,19 @@
     }
 
     &__body {
+        --columnGapContactUsBody: 20px;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        column-gap: 20px;
+        column-gap: var(--columnGapContactUsBody);
 
         @include tablet {
-            column-gap: 90px;
+            --columnGapContactUsBody: 90px;
         }
 
         @include mobile {
-            column-gap: 35px;
+            --columnGapContactUsBody: 35px;
         }
 
         @include mobile-m {
@@ -68,30 +72,34 @@
     }
 
     &__title {
+        --marginBottomContactUsTitle: 37px;
+
         line-height: 1.67;
         color: var(--color-dark);
 
         &:not(:last-child) {
-            margin-bottom: 37px;
+            margin-bottom: var(--marginBottomContactUsTitle);
 
             @include mobile-m {
-                margin-bottom: 83px;
+                --marginBottomContactUsTitle: 83px;
             }
 
             @include mobile-s {
-                margin-bottom: 38px;
+                --marginBottomContactUsTitle: 38px;
             }
         }
     }
 
     &__description {
+        --marginBottomContactUsDescription: 60px;
+
         @include mobile-m {
             order: 1;
-            margin-bottom: 60px;
+            margin-bottom: var(--marginBottomContactUsDescription);
         }
 
         @include mobile-s {
-            margin-bottom: 31px;
+            --marginBottomContactUsDescription: 31px;
         }
     }
 }
