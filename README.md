@@ -14,7 +14,8 @@
 * Бургер меню на ширине 768px
 * Адаптив
 
-*[Ссылка на макет](https://github.com/Enz0tech/site-3-portfolio/tree/main/images/landing)*
+*[Ссылка на макет](https://github.com/Enz0tech/site-3-portfolio/tree/main/images/landing)*  
+*[Ссылка на сайт](https://enz0tech.github.io/site-3-practice/)*
 
 #### Мои контакты:
 [![VK](https://img.shields.io/badge/-VK-333?style=for-the-badge&logo=Vk&logoColor=27A0D9)](https://vk.com/enzotech)
