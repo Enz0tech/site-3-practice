@@ -6,6 +6,10 @@
     border: none;
     padding: 0;
     margin-left: 0;
+
+    @include mobile-m {
+        max-width: 100%;
+    }
     
     &::backdrop {
         background-color: var(--color-burger-button);
@@ -24,7 +28,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 22px 0 20px 39px;
+        padding: 22px 33px 20px 33px;
         position: relative;
 
         &::before {
@@ -35,6 +39,14 @@
             width: 364px;
             height: 1px;
             background-color: var(--color-gray-alt);
+
+            @include mobile-m {
+                width: 85%;
+            }
+
+            @include mobile-s {
+                left: 28px;
+            }
         }
     }
 

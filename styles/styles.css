@@ -429,6 +429,11 @@ h3, .h3 {
   padding: 0;
   margin-left: 0;
 }
+@media (max-width: 575px) {
+  .mobile-overlay {
+    max-width: 100%;
+  }
+}
 .mobile-overlay::backdrop {
   background-color: var(--color-burger-button);
   opacity: 0.7;
@@ -444,7 +449,7 @@ h3, .h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0 20px 39px;
+  padding: 22px 33px 20px 33px;
   position: relative;
 }
 .mobile-overlay__close-button-wrapper::before {
@@ -455,6 +460,16 @@ h3, .h3 {
   width: 364px;
   height: 1px;
   background-color: var(--color-gray-alt);
+}
+@media (max-width: 575px) {
+  .mobile-overlay__close-button-wrapper::before {
+    width: 85%;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-overlay__close-button-wrapper::before {
+    left: 28px;
+  }
 }
 .mobile-overlay__list {
   display: flex;
